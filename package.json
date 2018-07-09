@@ -2,16 +2,16 @@
   "name": "api-nodewebpack",
   "version": "1.2.0",
   "description": "node webpack api",
-  "main": "./dist/server.js",
+  "main": "server.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "pm2": "pm2 start ./dist/server.js",
+    "pm2": "pm2 start server.js",
     "postinstall": "npm run build",
     "test": "jest --forceExit",
     "test-ci": "npm test && cat ./coverage/lcov.info | coveralls",
     "start": "  node server.js",
     "production": " node server.js",
-    "qa": " npm run build && node ./dist/server.js"
+    "qa": " npm run build && node server.js"
   },
   "repository": {
     "type": "git",
